@@ -10,22 +10,22 @@ public class ComportamientoTienda : MonoBehaviour
 
     void Start()
     {
-        
-        for(int i=0; i<cantidadItems; i++)
+
+        for (int i = 0; i < cantidadItems; i++)
         {
             ItemTienda item = new ItemTienda(randomString(), randomInt());
             Tienda.Add(item.Nombre, item.Costo);
         }
 
-        for(int i = 0; i < cantidadItems; i++)
+        for (int i = 0; i < cantidadItems; i++)
         {
             ItemsOrdenados.Add(Mayor(Tienda));
             Tienda.Remove(Mayor(Tienda).Nombre);
         }
 
-        foreach(ItemTienda item in ItemsOrdenados)
+        foreach (ItemTienda item in ItemsOrdenados)
         {
-            Debug.Log(item.Nombre + " ---- " + item.Costo);
+            Debug.Log(item.Nombre + " ---- " + item.Costo + " pesos");
         }
     }
 
@@ -83,3 +83,4 @@ public class ComportamientoTienda : MonoBehaviour
 
     }
 }
+
