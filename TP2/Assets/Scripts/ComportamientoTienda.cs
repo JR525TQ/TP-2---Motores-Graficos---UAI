@@ -32,7 +32,7 @@ public class ComportamientoTienda : MonoBehaviour
     public ItemTienda Mayor(Dictionary<string, int> diccionario)
     {
         ItemTienda itemMayorCosto = new ItemTienda("a", 0);
-        foreach (KeyValuePair<string, int> objetoActual in Tienda)
+        foreach (KeyValuePair<string, int> objetoActual in diccionario)
         {
             if (objetoActual.Value > itemMayorCosto.Costo)
             {
@@ -56,7 +56,7 @@ public class ComportamientoTienda : MonoBehaviour
 
     public int randomInt()
     {
-        int rInt = Random.Range(1, 500);
+        int rInt = Random.Range(2, 500);
 
         return rInt;
     }
